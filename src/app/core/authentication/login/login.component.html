@@ -1,0 +1,29 @@
+<div class="login">
+  <mat-card style=" background-color: #2874f0; color: white; max-width: 330px;max-height: 20px; text-align: center; margin: 2em auto;border-radius: 10px">FitLab</mat-card>
+  <mat-card class="box">
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+      <form class="login-form" [formGroup]="form"   (ngSubmit)="login()" >
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-field" >
+          <mat-label>Contraseña</mat-label>
+          <input matInput  type="password"  formControlName="password">
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <br>
+    <div class="foot">
+      <mat-card-actions>
+        <button id="loginBtn" mat-raised-button (click)="login()" color="primary">aceptar</button>
+        <br>
+        <br>
+        <span><a style="color: red; text-decoration: underline" routerLink="/signup"> Registrate ya!</a></span>
+      </mat-card-actions>
+
+    </div>
+  </mat-card>
+</div>
