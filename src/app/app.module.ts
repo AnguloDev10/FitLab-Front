@@ -21,6 +21,7 @@ import {MatToolbar, MatToolbarModule} from "@angular/material/toolbar";
 import {MatIcon, MatIconModule} from "@angular/material/icon";
 import {HeaderComponent} from "./shared/header/header.component";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { SidenavComponent } from './shared/sidenav/sidenav.component';
     MatProgressBarModule,
     MatDividerModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
