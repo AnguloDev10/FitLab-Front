@@ -17,12 +17,18 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatOptionModule} from "@angular/material/core";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatDividerModule} from "@angular/material/divider";
+import {MatToolbar, MatToolbarModule} from "@angular/material/toolbar";
+import {MatIcon, MatIconModule} from "@angular/material/icon";
+import {HeaderComponent} from "./shared/header/header.component";
+import { SidenavComponent } from './shared/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthenticationComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent,
+    SidenavComponent
   ],
   imports: [
     HttpClientModule,
@@ -39,7 +45,9 @@ import {MatDividerModule} from "@angular/material/divider";
     MatSelectModule,
     MatOptionModule,
     MatProgressBarModule,
-    MatDividerModule
+    MatDividerModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
