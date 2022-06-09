@@ -1,7 +1,5 @@
-<div class="login">
-  <mat-card style=" background-color: #2874f0; color: white; max-width: 330px;max-height: 20px; text-align: center; margin: 2em auto;border-radius: 10px">FitLab</mat-card>
-  <mat-card class="box">
-    <mat-card-title>Login</mat-card-title>
+<mat-card class="box">
+    <mat-card-title>FitLab</mat-card-title>
     <mat-card-content>
       <form class="login-form" [formGroup]="form"   (ngSubmit)="login()" >
         <mat-form-field appearance="fill" class="form-field">
@@ -21,9 +19,8 @@
         <button id="loginBtn" mat-raised-button (click)="login()" color="primary">aceptar</button>
         <br>
         <br>
-        <span><a style="color: red; text-decoration: underline" routerLink="/signup"> Registrate ya!</a></span>
+        <span><a style="color: red; text-decoration: underline" routerLink="/signup"> Recuperar !</a></span>
       </mat-card-actions>
 
     </div>
-  </mat-card>
-</div>
+</mat-card>

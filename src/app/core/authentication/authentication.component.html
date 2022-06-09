@@ -1,3 +1,9 @@
 <div class="contenedor">
-  <app-login></app-login>
+  <div class="wrapper">
+     <mat-card style=" background-color: #ffffff; max-width: 330px;max-height: 20px; text-align: center; margin: 2em auto;border-radius: 10px">
+        <h2 class="underlineHover"  routerLink="/login"  routerLinkActive="active"> Sign In </h2>
+        <h2 class="underlineHover"  routerLink="/signup"  routerLinkActive="active">Sign Up </h2>
+     </mat-card>
+      <router-outlet></router-outlet>
+  </div>
 </div>
