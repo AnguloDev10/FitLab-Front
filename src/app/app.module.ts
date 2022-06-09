@@ -25,6 +25,9 @@ import { RegisterComponent } from './core/authentication/register/register.compo
 import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
 import { AdministradorComponent } from './views/administrador/administrador.component';
 import { ClienteComponent } from './views/cliente/cliente.component';
+import { MatListModule } from '@angular/material/list';
+import {MatMenuModule} from "@angular/material/menu";
+import {MatSidenavModule} from "@angular/material/sidenav";
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +57,10 @@ import { ClienteComponent } from './views/cliente/cliente.component';
     MatProgressBarModule,
     MatDividerModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule,
+    MatMenuModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
