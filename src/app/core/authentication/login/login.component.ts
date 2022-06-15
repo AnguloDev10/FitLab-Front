@@ -7,6 +7,7 @@ import {FormControl,FormBuilder, FormGroup, Validators} from "@angular/forms";
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
+  loading=false;
   constructor(private fb:FormBuilder ) {
     this.form = this.fb.group({
 
@@ -15,6 +16,18 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  showpass(x:any,text:any){
+    if (x.type === "password") {
+      x.type = "text";
+      text.text = "Hide"
+    } else {
+      text.text ="Show";
+      x.type = "password";
+    }
+  }
+
+
+
   login(){
 
   }

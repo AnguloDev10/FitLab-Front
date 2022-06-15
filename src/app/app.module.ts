@@ -22,9 +22,6 @@ import {MatIcon, MatIconModule} from "@angular/material/icon";
 import {HeaderComponent} from "./shared/header/header.component";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { RegisterComponent } from './core/authentication/register/register.component';
-import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
-import { AdministradorComponent } from './views/administrador/administrador.component';
-import { ClienteComponent } from './views/cliente/cliente.component';
 import { MatListModule } from '@angular/material/list';
 import {MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
@@ -38,9 +35,6 @@ import {MatTableModule} from "@angular/material/table";
     HeaderComponent,
     SidenavComponent,
     RegisterComponent,
-    NutricionistaComponent,
-    AdministradorComponent,
-    ClienteComponent,
     ManageAccountsComponent
   ],
     imports: [
