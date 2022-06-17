@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormControl,FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { Router} from '@angular/router';
+import {AuthClienteService} from "../../../services/cliente/auth/auth-cliente.service";
+import {AuthNutriService} from "../../../services/nutricionista/auth/auth-nutri.service";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,14 +11,18 @@ import {FormControl,FormBuilder, FormGroup, Validators} from "@angular/forms";
 export class LoginComponent implements OnInit {
   form: FormGroup;
   loading=false;
-  constructor(private fb:FormBuilder ) {
-    this.form = this.fb.group({
+  @Input() userData = {Username: '', Password:''};
 
+  constructor(private router : Router, private fb:FormBuilder, private _authclient: AuthClienteService, _authnutri: AuthNutriService ) {
+    this.form = this.fb.group({
+      user:['', Validators.required],
+      password:['',Validators.required]
     })
   }
 
   ngOnInit(): void {
   }
+
   showpass(x:any,text:any){
     if (x.type === "password") {
       x.type = "text";
@@ -29,6 +36,20 @@ export class LoginComponent implements OnInit {
 
 
   login(){
+    const username = this.form.value.user;
+
+    const password = this.form.value.password;
+
+    let usuario = { email: username, password : password};
+
+    //recibo pass y username
+    this._authclient.loginCustomer()
+
+    //valido el code 200
+    //recibo response
+    //pregunto tipo de usuario
+
+
 
   }
   email = new FormControl('', [Validators.required, Validators.email]);

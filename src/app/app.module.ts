@@ -27,6 +27,14 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ManageAccountsComponent } from './views/administrador/manage-accounts/manage-accounts.component';
 import {MatTableModule} from "@angular/material/table";
+import { ClienteDashboardComponent } from './views/cliente/cliente-dashboard/cliente-dashboard.component';
+import { ClienteHomeComponent } from './views/cliente/cliente-home/cliente-home.component';
+import { ClienteDietsComponent } from './views/cliente/cliente-diets/cliente-diets.component';
+import { NutricionistaDashboardComponent } from './views/nutricionista/nutricionista-dashboard/nutricionista-dashboard.component';
+import { NutricionistaHomeComponent } from './views/nutricionista/nutricionista-home/nutricionista-home.component';
+//import { ClienteComponent } from './views/cliente/cliente.component';
+//import { DashboardComponent } from './views/cliente/dashboard/dashboard.component';
+//import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +43,12 @@ import {MatTableModule} from "@angular/material/table";
     HeaderComponent,
     SidenavComponent,
     RegisterComponent,
-    ManageAccountsComponent
+    ManageAccountsComponent,
+    ClienteDashboardComponent,
+    ClienteHomeComponent,
+    ClienteDietsComponent,
+    NutricionistaDashboardComponent,
+    NutricionistaHomeComponent
   ],
     imports: [
         HttpClientModule,

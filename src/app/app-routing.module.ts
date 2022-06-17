@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import {AuthenticationComponent} from "./core/authentication/authentication.component";
 import {RegisterComponent} from "./core/authentication/register/register.component";
 import {LoginComponent} from "./core/authentication/login/login.component";
+import {ClienteDashboardComponent} from "./views/cliente/cliente-dashboard/cliente-dashboard.component";
+import {ClienteHomeComponent} from "./views/cliente/cliente-home/cliente-home.component";
+import {ClienteDietsComponent} from "./views/cliente/cliente-diets/cliente-diets.component";
 
 const routes: Routes = [
 
@@ -16,6 +19,14 @@ const routes: Routes = [
   },
   {
     path: '', redirectTo: '/login', pathMatch: 'full'
+  },
+  {
+    path: 'customerDashboard', component: ClienteDashboardComponent,
+    children: [
+      {path: 'customerHome',component: ClienteHomeComponent},
+      {path: 'customerDiets',component: ClienteDietsComponent},
+
+    ]
   }
 ];
 

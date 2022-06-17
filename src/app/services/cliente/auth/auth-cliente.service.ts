@@ -7,7 +7,7 @@ import {environment} from "../../../../environments/environment";
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthClienteService {
   Url: string = `${environment.EasyNutrition}/authentication`;
   constructor(private http : HttpClient, private router: Router) { }
   httpOptions = {
@@ -16,8 +16,11 @@ export class AuthService {
     })
   }
 
-  loginAdmin(data:any) : Observable<any> {
+  loginCustomer(data:any) : Observable<any> {
     return this.http.post(this.Url,data,this.httpOptions);
+  }
+  registerCustomer(user:any) : Observable<any> {
+    return this.http.post(this.Url,user,this.httpOptions)
   }
 
 }
