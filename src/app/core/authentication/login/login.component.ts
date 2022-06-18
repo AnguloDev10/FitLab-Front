@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     let usuario = { email: username, password : password};
 
     //recibo pass y username
-    this._authclient.loginCustomer()
+    //this._authclient.loginCustomer()
 
     //valido el code 200
     //recibo response
