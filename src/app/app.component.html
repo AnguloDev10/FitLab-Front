@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+<mat-drawer-container *ngIf="isLogged;else noLogged">
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <!-- <mat-drawer mode="side" opened="true"> -->
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-header (sidenavToggle)="sideBarToggler()"></app-header>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
+<ng-template  #noLogged>
+    <router-outlet></router-outlet>
+</ng-template>

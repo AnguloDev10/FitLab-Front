@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {AuthenticationComponent} from "./core/authentication/authentication.component";
-import {RegisterComponent} from "./core/authentication/register/register.component";
-import {LoginComponent} from "./core/authentication/login/login.component";
+import { AuthenticationComponent } from "./core/authentication/authentication.component";
+import { RegisterComponent } from "./core/authentication/register/register.component";
+import { LoginComponent } from "./core/authentication/login/login.component";
+import { ProfileGuard } from './shared/guards/profile.guard';
 
 const routes: Routes = [
 
@@ -16,7 +17,17 @@ const routes: Routes = [
   },
   {
     path: '', redirectTo: '/login', pathMatch: 'full'
-  }
+  },
+  {
+    path: 'board',
+    loadChildren: () => import('./views/board/board.module').then(m => m.BoardModule),
+    canActivate: [ProfileGuard]
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./views/user/user.module').then(m => m.UserModule),
+    canActivate: [ProfileGuard]
+  },
 ];
 
 @NgModule({

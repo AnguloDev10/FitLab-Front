@@ -23,7 +23,6 @@ import {HeaderComponent} from "./shared/header/header.component";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { RegisterComponent } from './core/authentication/register/register.component';
 import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
-import { AdministradorComponent } from './views/administrador/administrador.component';
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { MatListModule } from '@angular/material/list';
 import {MatMenuModule} from "@angular/material/menu";
@@ -39,7 +38,6 @@ import {MatTableModule} from "@angular/material/table";
     SidenavComponent,
     RegisterComponent,
     NutricionistaComponent,
-    AdministradorComponent,
     ClienteComponent,
     ManageAccountsComponent
   ],
