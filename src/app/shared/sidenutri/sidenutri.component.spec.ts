@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NutricionistaHomeComponent } from './nutricionista-home.component';
+import { SidenutriComponent } from './sidenutri.component';
 
-describe('NutricionistaHomeComponent', () => {
-  let component: NutricionistaHomeComponent;
-  let fixture: ComponentFixture<NutricionistaHomeComponent>;
+describe('SidenutriComponent', () => {
+  let component: SidenutriComponent;
+  let fixture: ComponentFixture<SidenutriComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NutricionistaHomeComponent ]
+      declarations: [ SidenutriComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NutricionistaHomeComponent);
+    fixture = TestBed.createComponent(SidenutriComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

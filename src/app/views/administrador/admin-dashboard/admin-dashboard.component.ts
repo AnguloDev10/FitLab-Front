@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-cliente-dashboard',
-  templateUrl: './cliente-dashboard.component.html',
-  styleUrls: ['./cliente-dashboard.component.css']
+  selector: 'app-admin-dashboard',
+  templateUrl: './admin-dashboard.component.html',
+  styleUrls: ['./admin-dashboard.component.css']
 })
-export class ClienteDashboardComponent implements OnInit {
+export class AdminDashboardComponent implements OnInit {
 
   constructor() { }
-
   title = 'FitLab-Front';
   sideBarOpen = true;
 
@@ -17,5 +16,4 @@ export class ClienteDashboardComponent implements OnInit {
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }
-
 }

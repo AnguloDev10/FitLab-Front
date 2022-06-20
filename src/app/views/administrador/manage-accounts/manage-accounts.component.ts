@@ -11,5 +11,12 @@ export class ManageAccountsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  getAllAccounts(){
+
+  }
+
+  deleteAccount(id : number) {
+
+  }
 
 }

@@ -11,7 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCardModule} from "@angular/material/card";
 import {MatSelectModule} from "@angular/material/select";
 import {MatOptionModule} from "@angular/material/core";
@@ -27,11 +27,14 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ManageAccountsComponent } from './views/administrador/manage-accounts/manage-accounts.component';
 import {MatTableModule} from "@angular/material/table";
+import { AdminHomeComponent } from './views/administrador/admin-home/admin-home.component';
+import { AdminDashboardComponent } from './views/administrador/admin-dashboard/admin-dashboard.component';
+import { SideadminComponent } from './shared/sideadmin/sideadmin.component';
+import { SideclientComponent } from './shared/sideclient/sideclient.component';
+import { SidenutriComponent } from './shared/sidenutri/sidenutri.component';
+import { NutriCardComponent } from './shared/nutri-card/nutri-card.component';
 import { ClienteDashboardComponent } from './views/cliente/cliente-dashboard/cliente-dashboard.component';
-import { ClienteHomeComponent } from './views/cliente/cliente-home/cliente-home.component';
-import { ClienteDietsComponent } from './views/cliente/cliente-diets/cliente-diets.component';
-import { NutricionistaDashboardComponent } from './views/nutricionista/nutricionista-dashboard/nutricionista-dashboard.component';
-import { NutricionistaHomeComponent } from './views/nutricionista/nutricionista-home/nutricionista-home.component';
+import { NutriListComponent } from './views/cliente/nutri-list/nutri-list.component';
 //import { ClienteComponent } from './views/cliente/cliente.component';
 //import { DashboardComponent } from './views/cliente/dashboard/dashboard.component';
 //import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
@@ -44,11 +47,14 @@ import { NutricionistaHomeComponent } from './views/nutricionista/nutricionista-
     SidenavComponent,
     RegisterComponent,
     ManageAccountsComponent,
+    AdminHomeComponent,
+    AdminDashboardComponent,
+    SideadminComponent,
+    SideclientComponent,
+    SidenutriComponent,
+    NutriCardComponent,
     ClienteDashboardComponent,
-    ClienteHomeComponent,
-    ClienteDietsComponent,
-    NutricionistaDashboardComponent,
-    NutricionistaHomeComponent
+    NutriListComponent
   ],
     imports: [
         HttpClientModule,
@@ -71,7 +77,8 @@ import { NutricionistaHomeComponent } from './views/nutricionista/nutricionista-
         MatListModule,
         MatMenuModule,
         MatSidenavModule,
-        MatTableModule
+        MatTableModule,
+        FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

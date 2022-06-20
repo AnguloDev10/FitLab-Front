@@ -1,14 +1,14 @@
-export class Perfil {
-  id?: number;
-  username?:string;
-  password?: string;
+export interface Perfil {
   name? : string;
   lastname?: string;
-  birthday?: string;
   email?: string;
+  password?: string;
   phone?: string;
-  address?: string;
-  active?: string;
-  linkedin?: string;
   role?: string;
 }
+
+export interface Account {
+  userName: string,
+  password: string
+}
+
