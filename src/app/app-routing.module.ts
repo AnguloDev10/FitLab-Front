@@ -10,7 +10,9 @@ import {ClienteDashboardComponent} from "./views/cliente/cliente-dashboard/clien
 import {NutriListComponent} from "./views/cliente/nutri-list/nutri-list.component";
 import {ManageSubscriptionComponent} from "./views/administrador/manage-subscription/manage-subscription.component";
 import {EditSubscriptionComponent} from "./views/administrador/edit-subscription/edit-subscription.component";
-
+import {NutricionistaExperienceComponent} from "./views/Nutricionista/nutricionista-experience/nutricionista-experience.component";
+import{NutricionistaDashboardComponent} from "./views/Nutricionista/Nutricionista-dashboard/nutricionista-dashboard/nutricionista-dashboard.component";
+import {NutricionistaHomeComponent} from "./views/Nutricionista/nutricionista-home/nutricionista-home.component";
 
 const routes: Routes = [
 
@@ -39,9 +41,17 @@ const routes: Routes = [
     children: [
       {path: 'nutri-list',component: NutriListComponent}
     ]
-  }
-];
+  },
 
+  {
+    path: 'nutricionistaDashboard', component: NutricionistaDashboardComponent,
+    children: [
+      {path: 'nutrivhome',component: NutricionistaHomeComponent},
+      {path: 'nutricionista-experience',component: NutricionistaExperienceComponent}
+    ]
+  },
+
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

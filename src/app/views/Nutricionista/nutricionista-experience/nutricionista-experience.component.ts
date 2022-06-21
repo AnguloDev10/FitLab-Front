@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NutrivService} from "../../../services/nutriv.service";
 
 @Component({
   selector: 'app-nutricionista-experience',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NutricionistaExperienceComponent implements OnInit {
 
-  constructor() { }
+  experiences : any [] = []
+  constructor(private _nutrivService : NutrivService) { }
 
   ngOnInit(): void {
+    this.experiences=[];
+    this._nutrivService.getExperiences().subscribe(
+      (response : any[]) =>{
+        this.experiences = response
+        console.log(this.experiences)
+      }
+    )
   }
-
+  deleteExperience(id : number) {
+    this._nutrivService.deleteExperience(id).subscribe(
+      response => this.ngOnInit()
+    )
+  }
 }

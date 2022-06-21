@@ -40,6 +40,8 @@ import { ClienteHomeComponent } from './views/cliente/cliente-home/cliente-home.
 import { ManageSubscriptionComponent } from './views/administrador/manage-subscription/manage-subscription.component';
 import { EditSubscriptionComponent } from './views/administrador/edit-subscription/edit-subscription.component';
 import { NutricionistaExperienceComponent } from './views/Nutricionista/nutricionista-experience/nutricionista-experience.component';
+import { NutricionistaDashboardComponent } from './views/Nutricionista/Nutricionista-dashboard/nutricionista-dashboard/nutricionista-dashboard.component';
+import { NutricionistaHomeComponent } from './views/Nutricionista/nutricionista-home/nutricionista-home.component';
 //import { ClienteComponent } from './views/cliente/cliente.component';
 //import { DashboardComponent } from './views/cliente/dashboard/dashboard.component';
 //import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
@@ -64,7 +66,9 @@ import { NutricionistaExperienceComponent } from './views/Nutricionista/nutricio
     ClienteHomeComponent,
     ManageSubscriptionComponent,
     EditSubscriptionComponent,
-    NutricionistaExperienceComponent
+    NutricionistaExperienceComponent,
+    NutricionistaDashboardComponent,
+    NutricionistaHomeComponent
   ],
     imports: [
         HttpClientModule,

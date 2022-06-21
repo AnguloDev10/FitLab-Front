@@ -1,1 +1,21 @@
-<p>nutricionista-experience works!</p>
+<div class="col-2"></div>
+
+<div class="table-responsive mb-4">
+  <table class="table table-hover">
+    <thead class="thead bg-primary text-white">
+    <tr>
+      <th>#</th>
+      <th>Descripción</th>
+    </tr>
+    </thead>
+    <tbody *ngFor ="let experience of experiences; index as i">
+    <th scope="row">{{i+1}}</th>
+    <td> {{experience.description.toString() | uppercase}} </td>
+
+    <td>
+      <button class="btn btn-warning" [routerLink]="['../nutricionista-experience', experience.id]">EDIT</button>
+      <button class="btn btn-danger" (click)="deleteExperience(experience.id)">DELETE</button>
+    </td>
+    </tbody>
+  </table>
+</div>

@@ -1,1 +1,16 @@
-<p>sidenutri works!</p>
+<mat-nav-list>
+  <div class="logo py-4">
+    <img src="./assets/logo.svg" alt="Company Logo" />
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader class="mt-2">NUTRICIONISTA</h2>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/nutricionistaDashboard/nutrivhome">
+    <mat-icon>home</mat-icon> Home
+  </a>
+  <a mat-list-item> <mat-icon>edit</mat-icon> Perfil </a>
+
+  <a mat-list-item> <mat-icon>edit</mat-icon> Experience </a>
+  <a mat-list-item> <mat-icon>edit</mat-icon> Schedule </a>
+</mat-nav-list>
+
