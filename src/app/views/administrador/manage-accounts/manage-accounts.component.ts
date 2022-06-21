@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AdminService} from "../../../services/admin.service";
+import {IRootObject} from "../../../model/Account";
 
 @Component({
   selector: 'app-manage-accounts',
@@ -7,16 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageAccountsComponent implements OnInit {
 
-  constructor() { }
+  accounts : any[] = [];
+  constructor(private _adminService : AdminService) { }
 
   ngOnInit(): void {
+    this.accounts=[];
+    this._adminService.getAccounts().subscribe(
+      (response : any[]) =>{
+        this.accounts = response
+        console.log(this.accounts)
+      }
+    )
   }
-  getAllAccounts(){
-
-  }
-
   deleteAccount(id : number) {
-
+    this._adminService.deleteAccount(id).subscribe(
+      response => this.ngOnInit()
+    )
   }
 
 }

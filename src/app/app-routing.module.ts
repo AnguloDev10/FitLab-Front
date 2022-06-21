@@ -8,6 +8,8 @@ import {AdminHomeComponent} from "./views/administrador/admin-home/admin-home.co
 import {ManageAccountsComponent} from "./views/administrador/manage-accounts/manage-accounts.component";
 import {ClienteDashboardComponent} from "./views/cliente/cliente-dashboard/cliente-dashboard.component";
 import {NutriListComponent} from "./views/cliente/nutri-list/nutri-list.component";
+import {ManageSubscriptionComponent} from "./views/administrador/manage-subscription/manage-subscription.component";
+import {EditSubscriptionComponent} from "./views/administrador/edit-subscription/edit-subscription.component";
 
 
 const routes: Routes = [
@@ -27,8 +29,9 @@ const routes: Routes = [
     path: 'adminDashboard', component: AdminDashboardComponent,
     children: [
       {path: 'adminHome',component: AdminHomeComponent},
-      {path: 'manageAccounts',component: ManageAccountsComponent}
-
+      {path: 'manageAccounts',component: ManageAccountsComponent},
+      {path: 'managePlans',component: ManageSubscriptionComponent},
+      {path: 'editPlan/:id',component: EditSubscriptionComponent }
     ]
   },
   {
