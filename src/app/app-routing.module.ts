@@ -10,6 +10,7 @@ import {ClienteDashboardComponent} from "./views/cliente/cliente-dashboard/clien
 import {NutriListComponent} from "./views/cliente/nutri-list/nutri-list.component";
 import {ManageSubscriptionComponent} from "./views/administrador/manage-subscription/manage-subscription.component";
 import {EditSubscriptionComponent} from "./views/administrador/edit-subscription/edit-subscription.component";
+import {AdminPerfilComponent} from "./views/administrador/admin-perfil/admin-perfil.component";
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
     path: 'adminDashboard', component: AdminDashboardComponent,
     children: [
       {path: 'adminHome',component: AdminHomeComponent},
+      {path: 'adminProfile',component: AdminPerfilComponent },
       {path: 'manageAccounts',component: ManageAccountsComponent},
       {path: 'managePlans',component: ManageSubscriptionComponent},
       {path: 'editPlan/:id',component: EditSubscriptionComponent }
