@@ -24,6 +24,11 @@ const routes: Routes = [
     canActivate: [ProfileGuard]
   },
   {
+    path: 'nutritions',
+    loadChildren: () => import('./views/nutricionista/nutricionista.module').then(m => m.NutricionistaModule),
+    // canActivate: [ProfileGuard]
+  },
+  {
     path: 'user',
     loadChildren: () => import('./views/user/user.module').then(m => m.UserModule),
     canActivate: [ProfileGuard]
