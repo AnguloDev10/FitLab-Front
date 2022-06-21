@@ -22,13 +22,13 @@ import {MatIcon, MatIconModule} from "@angular/material/icon";
 import {HeaderComponent} from "./shared/header/header.component";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { RegisterComponent } from './core/authentication/register/register.component';
-import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { MatListModule } from '@angular/material/list';
 import {MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ManageAccountsComponent } from './views/administrador/manage-accounts/manage-accounts.component';
 import {MatTableModule} from "@angular/material/table";
+import { NotFoundPageComponent } from './shared/views/not-found-page/not-found-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,9 +37,9 @@ import {MatTableModule} from "@angular/material/table";
     HeaderComponent,
     SidenavComponent,
     RegisterComponent,
-    NutricionistaComponent,
     ClienteComponent,
-    ManageAccountsComponent
+    ManageAccountsComponent,
+    NotFoundPageComponent,
   ],
     imports: [
         HttpClientModule,
