@@ -28,7 +28,6 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ManageAccountsComponent } from './views/administrador/manage-accounts/manage-accounts.component';
 import {MatTableModule} from "@angular/material/table";
-import { NotFoundPageComponent } from './shared/views/not-found-page/not-found-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +38,6 @@ import { NotFoundPageComponent } from './shared/views/not-found-page/not-found-p
     RegisterComponent,
     ClienteComponent,
     ManageAccountsComponent,
-    NotFoundPageComponent,
   ],
     imports: [
         HttpClientModule,
