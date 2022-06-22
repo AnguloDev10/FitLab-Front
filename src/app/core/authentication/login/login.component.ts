@@ -1,8 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl,FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { Router} from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
-import { IUser } from '../../../shared/models/user';
+import {Account} from "../../../model/Usuario";
+import {AuthService} from "../../../services/auth.service";
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   loading=false;
   @Input() userData = {Username: '', Password:''};
 
-  constructor(private router : Router, private fb:FormBuilder,  private _authService:AuthService, private _router:Router) {
+  constructor(private router : Router,  private _authService:AuthService, private fb:FormBuilder) {
     this.form = this.fb.group({
       user:['', Validators.required],
       password:['',Validators.required]
@@ -40,12 +41,11 @@ export class LoginComponent implements OnInit {
 
     const password = this.form.value.password;
 
-    let usuario:IUser = { userName: username, password : password};
+    let usuario:Account = { userName: username, password : password};
 
     this._authService.login(usuario).subscribe(response=>{
-      window.location.href = '/board';
+      window.location.href = '/adminDashboard';
     });
-
 
 
   }

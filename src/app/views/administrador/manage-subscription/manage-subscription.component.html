@@ -1,0 +1,39 @@
+<div class="col-2"></div>
+<script>
+  console.log(accounts)
+</script>
+
+<div class="table-responsive mb-4">
+
+  <table class="table table-hover">
+    <thead class="thead bg-primary text-white">
+    <tr>
+      <th>#</th>
+      <th>Sesiones</th>
+      <th>Precio</th>
+      <th>Active</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody *ngFor ="let subscription of subscriptions; index as i">
+    <th scope="row">{{i+1}}</th>
+    <td> {{subscription.maxSessions.toString() | uppercase}} </td>
+    <td> {{subscription.profileId.toString() | uppercase}} </td>
+    <td> {{subscription.price.toString() | uppercase}} </td>
+    <td>
+      <button class="btn btn-warning" [routerLink]="['../editPlan', subscription.id]">EDIT</button>
+      <button class="btn btn-danger" (click)="deleteSubscription(subscription.id)">DELETE</button>
+    </td>
+
+    </tbody>
+  </table>
+  <div class="col">
+    <button
+      class="btn btn-success btn-lg btn-circle floating-right shadow"
+      [routerLink]="['/planNew']"
+    >
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+</div>
+

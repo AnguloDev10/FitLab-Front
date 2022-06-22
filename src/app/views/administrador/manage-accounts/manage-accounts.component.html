@@ -1,0 +1,33 @@
+<div class="col-2"></div>
+<script>
+  console.log(accounts)
+</script>
+
+<div class="table-responsive mb-4">
+  <table class="table table-hover">
+    <thead class="thead bg-primary text-white">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>LastName</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody *ngFor ="let account of accounts; index as i">
+      <th scope="row">{{i+1}}</th>
+      <td> {{account.name | uppercase}} </td>
+      <td *ngIf="!account.name">none</td>
+      <td> {{account.lastName | uppercase}} </td>
+      <td *ngIf="!account.lastName">none</td>
+      <td> {{account.email | uppercase}} </td>
+      <td *ngIf="!account.email">none</td>
+      <td *ngIf="account.password">******</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteAccount(account.id)">DELETE</button>
+      </td>
+
+    </tbody>
+  </table>
+</div>

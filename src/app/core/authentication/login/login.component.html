@@ -1,20 +1,19 @@
 <mat-card class="box">
-  <mat-card-title>FitLab</mat-card-title>
-  <mat-card-content>
-    <form class="login-form" [formGroup]="form" (ngSubmit)="login()">
+    <mat-card-title>FitLab</mat-card-title>
+    <mat-card-content>
+      <form class="login-form" [formGroup]="form"   (ngSubmit)="login()" >
 
-      <mat-form-field appearance="fill" class="form-field">
-        <mat-label>Enter your email</mat-label>
-        <input matInput [(ngModel)]="userData.Username" placeholder="pat@example.com" [formControl]="email"
-          formControlName="user" required>
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-      </mat-form-field>
-      <mat-form-field appearance="fill" class="form-field">
-        <mat-label>Contraseña</mat-label>
-        <input matInput [(ngModel)]="userData.Password" autocomplete="off" type="password" formControlName="password">
-      </mat-form-field>
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Enter your email</mat-label>
+          <input matInput  [(ngModel)]="userData.Username" placeholder="pat@example.com" [formControl]="email" formControlName="user" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-field" >
+          <mat-label>Contraseña</mat-label>
+          <input matInput  [(ngModel)]="userData.Password" autocomplete="off"  type="password"  formControlName="password">
+        </mat-form-field>
 
-    </form>
+      </form>
   </mat-card-content>
   <br>
   <div class="foot">
