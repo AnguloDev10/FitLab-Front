@@ -26,8 +26,6 @@ import { ClienteComponent } from './views/cliente/cliente.component';
 import { MatListModule } from '@angular/material/list';
 import {MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
-import { ManageAccountsComponent } from './views/administrador/manage-accounts/manage-accounts.component';
-import {MatTableModule} from "@angular/material/table";
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,32 +34,30 @@ import {MatTableModule} from "@angular/material/table";
     HeaderComponent,
     SidenavComponent,
     RegisterComponent,
-    ClienteComponent,
-    ManageAccountsComponent,
+    ClienteComponent
   ],
-    imports: [
-        HttpClientModule,
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        ReactiveFormsModule,
-        MatSnackBarModule,
-        MatProgressSpinnerModule,
-        MatCardModule,
-        MatSelectModule,
-        MatOptionModule,
-        MatProgressBarModule,
-        MatDividerModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatListModule,
-        MatMenuModule,
-        MatSidenavModule,
-        MatTableModule
-    ],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatProgressBarModule,
+    MatDividerModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    MatMenuModule,
+    MatSidenavModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
