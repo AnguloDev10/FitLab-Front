@@ -1,3 +1,6 @@
 .paddo{
   margin-top: 300px;
 }
+.row {
+  justify-content: space-between;
+}

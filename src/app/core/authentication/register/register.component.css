@@ -1,6 +1,6 @@
 .mat-card {
-  max-width: 400px;
-  height: 600px;
+  max-width: 500px;
+  height: 670px;
   background-color: #cbee2e;
 }
 .box {
@@ -20,7 +20,7 @@
   max-width: 330px;
 }
 .mat-form-field{
-  padding: 7px 70px;
+  padding: 7px 20px;
 }
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');

@@ -40,6 +40,7 @@ import { ClienteHomeComponent } from './views/cliente/cliente-home/cliente-home.
 import { ManageSubscriptionComponent } from './views/administrador/manage-subscription/manage-subscription.component';
 import { EditSubscriptionComponent } from './views/administrador/edit-subscription/edit-subscription.component';
 import { AdminPerfilComponent } from './views/administrador/admin-perfil/admin-perfil.component';
+import { ChoSubsComponent } from './views/cliente/cho-subs/cho-subs.component';
 //import { ClienteComponent } from './views/cliente/cliente.component';
 //import { DashboardComponent } from './views/cliente/dashboard/dashboard.component';
 //import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
@@ -64,7 +65,8 @@ import { AdminPerfilComponent } from './views/administrador/admin-perfil/admin-p
     ClienteHomeComponent,
     ManageSubscriptionComponent,
     EditSubscriptionComponent,
-    AdminPerfilComponent
+    AdminPerfilComponent,
+    ChoSubsComponent
   ],
     imports: [
         HttpClientModule,

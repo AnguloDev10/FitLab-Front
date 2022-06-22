@@ -1,28 +1,28 @@
 <div class="heading">EDIT PLAN</div>
-<form  #editPlanForm="ngForm"  class="plan" ngNativeValidate>
+<form  #editPlanForm="ngForm"  class="plan"   (ngSubmit)="updatePlan(editPlanForm)"   ngNativeValidate [formGroup]="form">
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" name="name"  required>
+    <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
   </div>
 
   <div class="form-group">
     <label for="sesiones">Sesiones</label>
-    <input type="text" class="form-control" id="sesiones" name="sesiones"  required>
+    <input type="text" class="form-control" id="sesiones" name="sesiones" formControlName="sesion" required>
   </div>
 
   <div class="form-group">
     <label for="cost">Precio</label>
-    <input type="number" class="form-control" name="cost" id="cost" required>
+    <input type="number" class="form-control" name="cost" id="cost" formControlName="precio" required>
   </div>
 
   <div class="form-group">
     <label for="description">Description</label>
-    <textarea class="form-control" id="description" name="description" rows="3"  required></textarea>
+    <textarea class="form-control" id="description" name="description" rows="3" formControlName="description" required></textarea>
   </div>
 
   <div class="form-group">
     <label for="status">Select Status</label>
-    <select class="form-control" id="status" name="status" ngModel required>
+    <select class="form-control" id="status" name="status" formControlName="status" ngModel required>
       <option value="active">ACTIVE</option>
       <option value="inactive">INACTIVE</option>
     </select>
@@ -30,6 +30,5 @@
 
   <button type="submit" class="btn btn-warning">UPDATE</button> &nbsp;
   <button type="button" class="btn btn-secondary" >BACK</button>
-
 
 </form>
