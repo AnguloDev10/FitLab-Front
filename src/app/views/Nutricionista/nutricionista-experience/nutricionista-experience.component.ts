@@ -25,4 +25,10 @@ export class NutricionistaExperienceComponent implements OnInit {
       response => this.ngOnInit()
     )
   }
+
+  UpdateExperience(id: number, data: string ){
+    this._nutrivService.UpdateExperience(id,data).subscribe(
+      response => this.ngOnInit()
+    )
+  }
 }

@@ -42,6 +42,7 @@ import { EditSubscriptionComponent } from './views/administrador/edit-subscripti
 import { NutricionistaExperienceComponent } from './views/Nutricionista/nutricionista-experience/nutricionista-experience.component';
 import { NutricionistaDashboardComponent } from './views/Nutricionista/Nutricionista-dashboard/nutricionista-dashboard/nutricionista-dashboard.component';
 import { NutricionistaHomeComponent } from './views/Nutricionista/nutricionista-home/nutricionista-home.component';
+import { NutricionistaScheduleComponent } from './views/Nutricionista/nutricionista-schedule/nutricionista-schedule.component';
 //import { ClienteComponent } from './views/cliente/cliente.component';
 //import { DashboardComponent } from './views/cliente/dashboard/dashboard.component';
 //import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
@@ -68,7 +69,8 @@ import { NutricionistaHomeComponent } from './views/Nutricionista/nutricionista-
     EditSubscriptionComponent,
     NutricionistaExperienceComponent,
     NutricionistaDashboardComponent,
-    NutricionistaHomeComponent
+    NutricionistaHomeComponent,
+    NutricionistaScheduleComponent
   ],
     imports: [
         HttpClientModule,
@@ -92,7 +94,7 @@ import { NutricionistaHomeComponent } from './views/Nutricionista/nutricionista-
         MatMenuModule,
         MatSidenavModule,
         MatTableModule,
-        FormsModule
+        FormsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
