@@ -46,6 +46,7 @@ import { NutricionistaScheduleComponent } from './views/Nutricionista/nutricioni
 import { DietsComponent } from './views/Nutricionista/diets/diets.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { FeedbackPacientesComponent } from './views/Nutricionista/feedback-pacientes/feedback-pacientes.component';
 //import { ClienteComponent } from './views/cliente/cliente.component';
 //import { DashboardComponent } from './views/cliente/dashboard/dashboard.component';
 //import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
@@ -74,7 +75,8 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     NutricionistaDashboardComponent,
     NutricionistaHomeComponent,
     NutricionistaScheduleComponent,
-    DietsComponent
+    DietsComponent,
+    FeedbackPacientesComponent
   ],
   imports: [
     HttpClientModule,
