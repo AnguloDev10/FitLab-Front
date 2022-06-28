@@ -4,7 +4,7 @@ import {catchError, Observable, retry, throwError} from "rxjs";
 import {environment} from "../../environments/environment";
 import{Diet} from "../model/diet";
 import {Experience} from "../model/Experience";
-
+import {Schedule} from "../model/Schedule";
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,7 @@ export class NutrivService {
 
   private baseUrl: string=environment.baseUrl;
   private baseUrl_: string=environment.baseUrl_;
+  private base_: string=environment.base_;
   constructor(private http: HttpClient) { }
 
   httpOptions = {
@@ -62,40 +63,35 @@ export class NutrivService {
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-  getSchedule() : Observable<any> {
-    return this.http.get('https://localhost:7062/api/schedules')
+//Create Schedule
+  createItemS(item: any): Observable<Schedule> {
+    return this.http.post<Schedule>(this.base_, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
 
-  UpdateSchedule(id:any, data:any) : Observable<any> {
-    return this.http.put(`https://localhost:7062/api/schedules/${id}`,data)
+  getItemS(id: any): Observable<Schedule> {
+    return this.http.get<Schedule>(`https://localhost:7062/api/schedules/${id}`, this.httpOptions )
+      .pipe(retry(2), catchError(this.handleError));
   }
 
-  deleteSchedule(id:any) : Observable<any> {
-    return this.http.delete(`https://localhost:7062/api/schedules/${id}`);
+  getListS(): Observable<Schedule>{
+    return this.http.get<Schedule>(`https://localhost:7062/api/schedules`)
+      .pipe(retry(2), catchError(this.handleError));
   }
 
+  addSchedule(schedule: Schedule): Observable<Schedule>{
+    return this.http.post<Schedule>(this.base_, schedule);
+  }
 
+  updateItemS(id: any, item: any): Observable<Schedule>{
+    return this.http.put<Schedule>(`${this.base_}/${id}`, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
 
-
-
-
-
-
-
-
-
-
+  deleteItemS(id: any): Observable<any> {
+    return this.http.delete<Schedule>(`${this.base_}/${id}`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
 
 
   // Create Diet
