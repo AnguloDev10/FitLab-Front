@@ -43,6 +43,9 @@ import { NutricionistaExperienceComponent } from './views/Nutricionista/nutricio
 import { NutricionistaDashboardComponent } from './views/Nutricionista/Nutricionista-dashboard/nutricionista-dashboard/nutricionista-dashboard.component';
 import { NutricionistaHomeComponent } from './views/Nutricionista/nutricionista-home/nutricionista-home.component';
 import { NutricionistaScheduleComponent } from './views/Nutricionista/nutricionista-schedule/nutricionista-schedule.component';
+import { DietsComponent } from './views/Nutricionista/diets/diets.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatPaginatorModule} from "@angular/material/paginator";
 //import { ClienteComponent } from './views/cliente/cliente.component';
 //import { DashboardComponent } from './views/cliente/dashboard/dashboard.component';
 //import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
@@ -70,32 +73,35 @@ import { NutricionistaScheduleComponent } from './views/Nutricionista/nutricioni
     NutricionistaExperienceComponent,
     NutricionistaDashboardComponent,
     NutricionistaHomeComponent,
-    NutricionistaScheduleComponent
+    NutricionistaScheduleComponent,
+    DietsComponent
   ],
-    imports: [
-        HttpClientModule,
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        ReactiveFormsModule,
-        MatSnackBarModule,
-        MatProgressSpinnerModule,
-        MatCardModule,
-        MatSelectModule,
-        MatOptionModule,
-        MatProgressBarModule,
-        MatDividerModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatListModule,
-        MatMenuModule,
-        MatSidenavModule,
-        MatTableModule,
-        FormsModule,
-    ],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatProgressBarModule,
+    MatDividerModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatTableModule,
+    FormsModule,
+    MatGridListModule,
+    MatPaginatorModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

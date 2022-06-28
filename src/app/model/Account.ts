@@ -22,4 +22,5 @@ export interface IRootObject {
   schedules: any[];
   complaints: any[];
   subscriptions: any[];
+  diets: any[];
 }

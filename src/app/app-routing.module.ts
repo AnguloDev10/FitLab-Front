@@ -14,7 +14,7 @@ import {NutricionistaExperienceComponent} from "./views/Nutricionista/nutricioni
 import{NutricionistaDashboardComponent} from "./views/Nutricionista/Nutricionista-dashboard/nutricionista-dashboard/nutricionista-dashboard.component";
 import {NutricionistaHomeComponent} from "./views/Nutricionista/nutricionista-home/nutricionista-home.component";
 import {NutricionistaScheduleComponent} from "./views/Nutricionista/nutricionista-schedule/nutricionista-schedule.component";
-
+import {DietsComponent} from "./views/Nutricionista/diets/diets.component";
 const routes: Routes = [
 
   {
@@ -49,7 +49,8 @@ const routes: Routes = [
     children: [
       {path: 'nutrivhome',component: NutricionistaHomeComponent},
       {path: 'nutricionista-experience',component: NutricionistaExperienceComponent},
-      {path: 'nutricionista-schedule',component: NutricionistaScheduleComponent}
+      {path: 'nutricionista-schedule',component: NutricionistaScheduleComponent},
+      {path: 'diets',component: DietsComponent}
     ]
   },
 

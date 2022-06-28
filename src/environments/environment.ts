@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   EasyNutrition: 'https://localhost:7062/api/',
-  baseUrl: ""
+  baseUrl: "https://localhost:7062/api/diets"
 };
 
 /*
