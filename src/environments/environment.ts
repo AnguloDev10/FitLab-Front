@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  EasyNutrition: 'https://localhost:7062/api/'
+  EasyNutrition: 'https://localhost:7263/api/'
 };
 
 /*

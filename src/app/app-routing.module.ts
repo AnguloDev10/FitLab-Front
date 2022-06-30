@@ -45,7 +45,21 @@ const routes: Routes = [
       {path: 'choose-sub',component: ChoSubsComponent},
       {path: 'clientHome',component: ClienteHomeComponent}
     ]
-  }
+  },
+  {
+    path: 'user',
+    loadChildren: () =>
+        import('./views/user/user.module').then(
+          (m) => m.UserModule
+        ),
+  },
+  {
+    path: 'nutritions',
+    loadChildren: () =>
+        import('./views/nutricionista/nutricionista.module').then(
+          (m) => m.NutricionistaModule
+        ),
+  },
 ];
 
 @NgModule({

@@ -9,7 +9,7 @@
                             alt="Card image cap">
                     </div>
                     <div class="card-body pt-5">
-                        <img src="https://randomuser.me/api/portraits/men/64.jpg" alt="profile-image" class="profile" />
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="profile-image" class="profile" />
                         <h2 class="card-title">Información personal</h2>
                     </div>
                     <div class="card-header">
@@ -51,7 +51,7 @@
                                             type="text" id="lastName" value="" class="form-control"></div>
                                 </div>
                                 <div class="text-end">
-                                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                                    <button type="submit" (click)="updateProfileInfo()" *ngIf="isEditing" class="btn btn-primary">Actualizar</button>
                                 </div>
                             </form>
                         </div>

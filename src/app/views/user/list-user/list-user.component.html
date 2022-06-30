@@ -1,6 +1,5 @@
-
 <div class="container mt-3 mb-4">
-<div class="col-lg-9 mt-4 mt-lg-0">
+  <div class="col-lg-9 mt-4 mt-lg-0">
     <div class="row">
       <div class="col-md-12">
         <div class="user-dashboard-info-box table-responsive mb-0 bg-white p-4 shadow-sm">
@@ -10,6 +9,7 @@
                 <th>Datos del paciente</th>
                 <th class="text-center">Estado</th>
                 <th class="action text-right">Accion</th>
+                <th *ngIf="filterUser.status == 0" class="action text-right"></th>
               </tr>
             </thead>
             <tbody>
@@ -21,7 +21,8 @@
                   <div class="candidate-list-details">
                     <div class="candidate-list-info">
                       <div class="candidate-list-title">
-                        <h5 class="mb-0"><a [routerLink]="['/user/profile', profile.id]">{{profile.name}} {{profile.lastName}}</a></h5>
+                        <h5 class="mb-0"><a [routerLink]="['/user/profile', profile.id]">{{profile.name}}
+                            {{profile.lastName}}</a></h5>
                       </div>
                       <div class="candidate-list-option">
                         <ul class="list-unstyled">
@@ -36,7 +37,15 @@
                 </td>
                 <td>
                   <ul class="list-unstyled mb-0 d-flex justify-content-end">
-                    <li><mat-icon>delete</mat-icon>
+                    <li>
+                      <mat-icon>delete</mat-icon>
+                    </li>
+                  </ul>
+                </td>
+                <td *ngIf="filterUser.status == 0">
+                  <ul class="list-unstyled mb-0 d-flex justify-content-end">
+                    <li>
+                      <button (click)="approbeNutritions(profile.id)" class="btn btn-success">Aprobar</button>
                     </li>
                   </ul>
                 </td>
@@ -46,7 +55,8 @@
           <div class="text-center mt-3 mt-sm-3">
             <ul class="pagination justify-content-center mb-0">
               <li class="page-item disabled"> <span class="page-link">Prev</span> </li>
-              <li class="page-item active" aria-current="page"><span class="page-link">1 </span> <span class="sr-only">(current)</span></li>
+              <li class="page-item active" aria-current="page"><span class="page-link">1 </span> <span
+                  class="sr-only">(current)</span></li>
               <li class="page-item"><a class="page-link" href="#">2</a></li>
               <li class="page-item"><a class="page-link" href="#">3</a></li>
               <li class="page-item"><a class="page-link" href="#">...</a></li>
