@@ -14,7 +14,7 @@
             <input matInput placeholder="Description" name="description" required [(ngModel)]="dietData.description">
           </mat-form-field>
           <ng-container *ngIf="isEditMode; else elseTemplate">
-            <a mat-button color="primary" (click)="updateDiet()">Update</a>
+            <a mat-button color="primary" (click)="addDiet()">Update</a>
             <a mat-button color="warn" (click)="cancelEdit()">Cancel</a>
           </ng-container>
           <ng-template #elseTemplate>

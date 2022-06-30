@@ -5,6 +5,7 @@ import {environment} from "../../environments/environment";
 import{Diet} from "../model/diet";
 import {Experience} from "../model/Experience";
 import {Schedule} from "../model/Schedule";
+import {Feedback} from "../model/Feedback";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ export class NutrivService {
   private baseUrl: string=environment.baseUrl;
   private baseUrl_: string=environment.baseUrl_;
   private base_: string=environment.base_;
+  private base_r : string=environment.base_r;
   constructor(private http: HttpClient) { }
 
   httpOptions = {
@@ -93,7 +95,6 @@ export class NutrivService {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-
   // Create Diet
   createItem(item: any): Observable<Diet> {
     return this.http.post<Diet>(this.baseUrl, JSON.stringify(item), this.httpOptions)
@@ -124,4 +125,34 @@ export class NutrivService {
       .pipe(retry(2), catchError(this.handleError));
   }
 
+
+  // Create Feedback
+  createIteF(item:any): Observable<Feedback> {
+    return this.http.post<Feedback>(this.base_r, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+  // Get Diet by Id
+  getItemF(id:any): Observable<Feedback> {
+    return this.http.get<Feedback>(`${this.base_r}/${id}`, this.httpOptions )
+      .pipe(retry(2), catchError(this.handleError));
+  }
+  // Get Diet Data
+  getListF(): Observable<Feedback>{
+    return this.http.get<Feedback>(this.base_r)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  addDietF(feedback: Feedback): Observable<Feedback>{
+    return this.http.post<Feedback>(this.base_r, feedback);
+  }
+  // Update Diet
+  updateItemF(id: any, item: any): Observable<Feedback>{
+    return this.http.put<Feedback>(`${this.base_r}/${id}`, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+  // Delete Diet
+  deleteItemF_(id:any): Observable<any> {
+    return this.http.delete<Feedback>(`${this.base_r}/${id}`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
 }

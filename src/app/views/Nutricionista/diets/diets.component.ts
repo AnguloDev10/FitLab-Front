@@ -14,7 +14,7 @@ import {Router} from "@angular/router";
 })
 export class DietsComponent implements OnInit, AfterViewInit {
   @ViewChild('dietForm', {static: false})
-  dietForm!: NgForm;
+  dietForm: NgForm | undefined;
   dietData: Diet;
   dataSource = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'title', 'description', 'actions'];
@@ -58,6 +58,7 @@ export class DietsComponent implements OnInit, AfterViewInit {
   }
   cancelEdit(): void {
     this.isEditMode = false;
+    // @ts-ignore
     this.dietForm.resetForm();
   }
   deleteItem(id: number): void {

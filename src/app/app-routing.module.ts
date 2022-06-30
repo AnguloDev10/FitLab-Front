@@ -15,6 +15,8 @@ import{NutricionistaDashboardComponent} from "./views/Nutricionista/Nutricionist
 import {NutricionistaHomeComponent} from "./views/Nutricionista/nutricionista-home/nutricionista-home.component";
 import {NutricionistaScheduleComponent} from "./views/Nutricionista/nutricionista-schedule/nutricionista-schedule.component";
 import {DietsComponent} from "./views/Nutricionista/diets/diets.component";
+import {FeedbackPacientesComponent} from "./views/Nutricionista/feedback-pacientes/feedback-pacientes.component";
+
 const routes: Routes = [
 
   {
@@ -50,7 +52,8 @@ const routes: Routes = [
       {path: 'nutrivhome',component: NutricionistaHomeComponent},
       {path: 'nutricionista-experience',component: NutricionistaExperienceComponent},
       {path: 'nutricionista-schedule',component: NutricionistaScheduleComponent},
-      {path: 'diets',component: DietsComponent}
+      {path: 'diets',component: DietsComponent},
+      {path: 'feedback',component: FeedbackPacientesComponent}
     ]
   },
 
