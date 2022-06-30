@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ClienteService} from "../../services/cliente.service";
 
 @Component({
   selector: 'app-nutri-card',
@@ -8,9 +9,12 @@ import {Component, Input, OnInit} from '@angular/core';
 export class NutriCardComponent implements OnInit {
 
   @Input() member: any;
-  constructor() { }
+  constructor(
+    private clienteService : ClienteService
+  ) { }
 
   ngOnInit(): void {
   }
+
 
 }

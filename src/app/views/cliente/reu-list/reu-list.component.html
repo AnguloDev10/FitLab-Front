@@ -1,0 +1,16 @@
+<div class="container">
+  <h4 class="modal-title pull-left mt-3">FAQs</h4>
+  <div class="row">
+    <div class="col-12">
+      <accordion class="faq-sec" *ngFor="let meeting of meetings; index as i">
+        <accordion-group heading=" Reunion con id ->{{ i+1 }}">
+          <div>
+            <b>Link:</b>  {{ meeting?.link }}  <br>
+            <b>Start Date:</b> {{ meeting?.startAt.toString()}}<br>
+            <b>End Date:</b> {{ meeting?.endAt.toString()}}<br>
+          </div>
+        </accordion-group>
+      </accordion>
+    </div>
+  </div>
+</div>

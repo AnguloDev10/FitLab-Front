@@ -9,6 +9,7 @@ import {Account, Perfil} from "../model/Usuario";
   providedIn: 'root'
 })
 export class AuthService {
+  private any: "json" | "text" | "arraybuffer" | "blob";
 
   constructor(private _http: HttpClient) { }
   login(user:Account):Observable<IRootObject>{
@@ -18,6 +19,7 @@ export class AuthService {
     }));
   }
   register(user:any) : Observable<any>{
+    const responseType = {responseType: 'json'}
     return this._http.post<any>('https://localhost:7263/api/Profile',user).pipe(map(response => {
       //this._storage.setItem('user',response);
       return response;

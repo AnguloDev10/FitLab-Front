@@ -9,17 +9,19 @@
     <thead class="thead bg-primary text-white">
     <tr>
       <th>#</th>
+      <th>Nombre</th>
       <th>Sesiones</th>
       <th>Precio</th>
-      <th>Active</th>
+      <th>ProfileId</th>
       <th>Actions</th>
     </tr>
     </thead>
     <tbody *ngFor ="let subscription of subscriptions; index as i">
     <th scope="row">{{i+1}}</th>
+    <td>{{subscription.name.toString() | uppercase}}</td>
     <td> {{subscription.maxSessions.toString() | uppercase}} </td>
-    <td> {{subscription.profileId.toString() | uppercase}} </td>
     <td> {{subscription.price.toString() | uppercase}} </td>
+    <td> {{subscription.profileId.toString() | uppercase}} </td>
     <td>
       <button class="btn btn-warning" [routerLink]="['../editPlan', subscription.id]">EDIT</button>
       <button class="btn btn-danger" (click)="deleteSubscription(subscription.id)">DELETE</button>

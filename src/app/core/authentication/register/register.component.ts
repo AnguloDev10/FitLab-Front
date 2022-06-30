@@ -13,6 +13,7 @@ import Swal from 'sweetalert2';
 })
 export class RegisterComponent implements OnInit {
 
+  id : any
   form: FormGroup;
   Roles: any = ['Administrador', 'Nutricionista', 'Cliente'];
   constructor(private router : Router,  private _authService: AuthService, private fb:FormBuilder) {
@@ -34,17 +35,14 @@ export class RegisterComponent implements OnInit {
     if(this.form.value.rol == 'Administrador'){
       this._authService.register(this.form.value).subscribe(
         response=> {
+          localStorage.setItem('userid',response.id);
+          localStorage.setItem('email',response.email);
+          localStorage.setItem('name',response.name),
+            //localStorage.setItem('userid',response.id)
+            this.id = localStorage.getItem('userid');
+          console.log(response.value)
           Swal.fire("Create successfully","Click close button to back to the login page","success").then(result =>{
             this.router.navigate(['/adminDashboard/adminHome'])
-          })
-        }
-      )
-    }
-    if(this.form.value.rol == 'Nutricionista'){
-      this._authService.register(this.form.value).subscribe(
-        response=> {
-          Swal.fire("Create successfully","Click close button to back to the login page","success").then(result =>{
-            this.router.navigate(['/adminDashboard/choose-sub'])
           })
         }
       )
@@ -52,8 +50,29 @@ export class RegisterComponent implements OnInit {
     if(this.form.value.rol == 'Cliente'){
       this._authService.register(this.form.value).subscribe(
         response=> {
+          localStorage.setItem('userid',response.id);
+          localStorage.setItem('email',response.email);
+          localStorage.setItem('name',response.name),
+          //localStorage.setItem('userid',response.id)
+          this.id = localStorage.getItem('userid');
+          console.log(response.value)
           Swal.fire("Create successfully","Click close button to back to the login page","success").then(result =>{
-            this.router.navigate(['/clienteDashboard/choose-sub'])
+            this.router.navigate(['/clienteDashboard/choose-sub',this.id])
+          })
+        }
+      )
+    }
+    if(this.form.value.rol == 'Nutricionista'){
+      this._authService.register(this.form.value).subscribe(
+        response=> {
+          localStorage.setItem('userid',response.id);
+          localStorage.setItem('email',response.email);
+          localStorage.setItem('name',response.name),
+            //localStorage.setItem('userid',response.id)
+            this.id = localStorage.getItem('userid');
+          console.log(response.value)
+          Swal.fire("Create successfully","Click close button to back to the login page","success").then(result =>{
+
           })
         }
       )

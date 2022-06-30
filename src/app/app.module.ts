@@ -41,6 +41,14 @@ import { ManageSubscriptionComponent } from './views/administrador/manage-subscr
 import { EditSubscriptionComponent } from './views/administrador/edit-subscription/edit-subscription.component';
 import { AdminPerfilComponent } from './views/administrador/admin-perfil/admin-perfil.component';
 import { ChoSubsComponent } from './views/cliente/cho-subs/cho-subs.component';
+import { ReunionComponent } from './views/cliente/reunion/reunion.component';
+import { ReunionFormComponent } from './shared/reunion-form/reunion-form.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import { MatNativeDateModule } from '@angular/material/core';
+import { LocalDateTimePipe } from './pipe/local-date-time.pipe';
+import { ReuListComponent } from './views/cliente/reu-list/reu-list.component';
+import {AccordionModule} from "ngx-bootstrap/accordion";
 //import { ClienteComponent } from './views/cliente/cliente.component';
 //import { DashboardComponent } from './views/cliente/dashboard/dashboard.component';
 //import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
@@ -66,32 +74,40 @@ import { ChoSubsComponent } from './views/cliente/cho-subs/cho-subs.component';
     ManageSubscriptionComponent,
     EditSubscriptionComponent,
     AdminPerfilComponent,
-    ChoSubsComponent
+    ChoSubsComponent,
+    ReunionComponent,
+    ReunionFormComponent,
+    LocalDateTimePipe,
+    ReuListComponent
   ],
-    imports: [
-        HttpClientModule,
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        ReactiveFormsModule,
-        MatSnackBarModule,
-        MatProgressSpinnerModule,
-        MatCardModule,
-        MatSelectModule,
-        MatOptionModule,
-        MatProgressBarModule,
-        MatDividerModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatListModule,
-        MatMenuModule,
-        MatSidenavModule,
-        MatTableModule,
-        FormsModule
-    ],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatProgressBarModule,
+    MatDividerModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatTableModule,
+    FormsModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    AccordionModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

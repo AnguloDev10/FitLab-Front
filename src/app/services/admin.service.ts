@@ -28,5 +28,11 @@ export class AdminService {
   deleteSubscription( id:any) : Observable<any> {
     return this.http.delete(`https://localhost:7263/api/Subscription/${id}`);
   }
+  getSubscription(id:any) : Observable<any> {
+    return this.http.get(`https://localhost:7263/api/Subscription/${id}`);
+  }
+  postSubscription(data : any) : Observable<any> {
+    return this.http.post(`https://localhost:7263/api/Subscription`,data);
+  }
 
 }

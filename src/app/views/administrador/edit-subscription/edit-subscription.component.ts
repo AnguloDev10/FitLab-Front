@@ -11,12 +11,13 @@ import { Location } from '@angular/common';
 export class EditSubscriptionComponent implements OnInit {
 
   form: FormGroup;
-  id : any ; plan=[];
+  id : any ; plan : any=[];
+
   constructor(private router : Router,private fb:FormBuilder, private route: ActivatedRoute, private _adminService : AdminService, private location : Location) {
     this.form = this.fb.group({
       name:['', Validators.required],
-      sesiones:['', Validators.required],
-      precio:['', Validators.required],
+      maxSessions:['', Validators.required],
+      price:['', Validators.required],
       description:['', Validators.required],
       status:['', Validators.required],
     })
@@ -25,7 +26,12 @@ export class EditSubscriptionComponent implements OnInit {
   ngOnInit(): void {
     this.plan =[];
     this.id = this.route.snapshot.paramMap.get('id');
-
+    this._adminService.getSubscription(this.id)
+      .subscribe(
+        response => {
+           this.plan.push(response), console.log(response);
+        }
+      )
   }
 
   updatePlan(data:any) {

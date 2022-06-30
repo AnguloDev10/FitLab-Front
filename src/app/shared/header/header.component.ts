@@ -1,5 +1,6 @@
 
 import {Component, OnInit, Output, EventEmitter, ViewChild} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,10 @@ import {Component, OnInit, Output, EventEmitter, ViewChild} from '@angular/core'
 export class HeaderComponent implements OnInit {
 
   @Output() public sidenavToggle = new EventEmitter();
-  constructor() { }
+  name: any
+  constructor(private router: Router ) {
+    this.name = localStorage.getItem('name')
+  }
 
   ngOnInit(): void {
   }
@@ -17,4 +21,10 @@ export class HeaderComponent implements OnInit {
     this.sidenavToggle.emit();
   }
 
+  logout() {
+    localStorage.removeItem('userid');
+    localStorage.removeItem('email');
+    localStorage.removeItem('name');
+    this.router.navigateByUrl('/');
+  }
 }

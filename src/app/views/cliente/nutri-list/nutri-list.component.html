@@ -5,9 +5,9 @@
 <div class="container">
   <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-xs-2 mx-1">
     <div class="d-flex justify-content-center">
-      <app-nutri-card></app-nutri-card>
-      <app-nutri-card></app-nutri-card>
-      <app-nutri-card></app-nutri-card>
+    <div *ngFor="let nutricionista of nutricionistas">
+      <app-nutri-card [member]="nutricionista"></app-nutri-card>
+    </div>
     </div>
   </div>
 </div>

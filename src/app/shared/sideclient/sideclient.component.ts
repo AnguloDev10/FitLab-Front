@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-sideclient',
   templateUrl: './sideclient.component.html',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideclientComponent implements OnInit {
 
-  constructor() { }
+  name: any
+  constructor(private router: Router ) {
+    this.name = localStorage.getItem('name')
+  }
 
   ngOnInit(): void {
+
+  }
+  logout() {
+    localStorage.removeItem('userid');
+    localStorage.removeItem('email');
+    localStorage.removeItem('name');
+    this.router.navigateByUrl('/');
   }
 
 }

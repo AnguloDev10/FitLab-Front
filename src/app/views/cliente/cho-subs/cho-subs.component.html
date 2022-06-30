@@ -4,54 +4,52 @@
 
 
 <section class="text-center pb-4">
-  <h1 class="col-sm-3 m-auto p-4 border-bottom border-3px border-dark">Subscriptions</h1>
+  <h1 class="col-sm-3 m-auto p-4 border-bottom border-3px border-dark">Subscripciones</h1>
   <article class="d-inline-flex card m-1 mt-4 ml-3 mr-3 p-0 border-success border-3px">
     <h4 class="card-header text-light bg-success border-0 rounded-0 text-center">Free</h4>
     <header class="card-body text-light text-center bg-success bblr">
-      <h1>£0.00 <sub class="fs-1">Per Month</sub></h1>
+      <h1>0.00 <sub class="fs-1">Por Mes</sub></h1>
     </header>
     <footer class="card-body bg-white text-dark text-center">
       <ul class="list-unstyled text-left">
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> First Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Second Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Third Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Fourth Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Fifth Amazing Feature</li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Paquete basico </li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Cantidad de sesiones</li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Beneficios prueba</li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> No fiabilidad</li>
       </ul>
-      <button class="btn btn-success ml-auto pl-3 pr-3 disabled">Included</button>
+      <button class="btn btn-success ml-auto pl-3 pr-3" (click)="createPlanFree()">Activar</button>
     </footer>
   </article>
   <article class="d-inline-flex card m-1 ml-3 mr-3 p-0 border-warning border-3px">
     <h4 class="card-header text-light bg-warning border-0 rounded-0 text-center">Standard</h4>
     <header class="card-body text-light text-center bg-warning bblr">
-      <h1>£5.00 <sub class="fs-1">Per Month</sub></h1>
+      <h1>10.00 <sub class="fs-1">Por Mes</sub></h1>
     </header>
     <footer class="card-body bg-white text-dark text-center">
       <ul class="list-unstyled text-left">
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> First Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Second Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Third Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Fourth Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Fifth Amazing Feature</li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Segundos en ser atentidos</li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Mas cantidad de sesiones</li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Beneficios extras</li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Mayor fiabilidad</li>
       </ul>
       <h6 class="badge badge-dark p-1 text-warning mp"><i class="fa fa-star" aria-hidden="true"></i> Most Popular <i class="fa fa-star" aria-hidden="true"></i></h6>
-      <button class="btn btn-warning ml-auto pl-3 pr-3">Subscibe</button>
+      <button class="btn btn-warning ml-auto pl-3 pr-3" (click)="createPlanAdvance()">Subscribirse</button>
     </footer>
   </article>
   <article class="d-inline-flex card m-1 ml-3 mr-3 p-0 border-danger border-3px">
     <h4 class="card-header text-light bg-danger border-0 rounded-0 text-center">Advanced</h4>
     <header class="card-body text-light text-center bg-danger bblr">
-      <h1>£10.00 <sub class="fs-1">Per Month</sub></h1>
+      <h1>20.00 <sub class="fs-1">Por Mes</sub></h1>
     </header>
     <footer class="card-body bg-white text-dark text-center">
       <ul class="list-unstyled text-left">
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> First Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Second Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Third Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Fourth Amazing Feature</li>
-        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Fifth Amazing Feature</li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Primeros en ser atentidos</li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Mas cantidad de sesiones</li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Beneficios extras</li>
+        <li class="lead"><i class="fa fa-check text-success" aria-hidden="true"></i> Mayor fiabilidad</li>
+
       </ul>
-      <button class="btn btn-danger ml-auto pl-3 pr-3">Subscibe</button>
+      <button class="btn btn-danger ml-auto pl-3 pr-3" (click)="createPlanAdvance()">Subscribirse</button>
     </footer>
   </article>
 </section>

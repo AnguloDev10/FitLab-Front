@@ -13,6 +13,7 @@ import {EditSubscriptionComponent} from "./views/administrador/edit-subscription
 import {AdminPerfilComponent} from "./views/administrador/admin-perfil/admin-perfil.component";
 import {ChoSubsComponent} from "./views/cliente/cho-subs/cho-subs.component";
 import {ClienteHomeComponent} from "./views/cliente/cliente-home/cliente-home.component";
+import {ReunionComponent} from "./views/cliente/reunion/reunion.component";
 
 
 const routes: Routes = [
@@ -42,8 +43,9 @@ const routes: Routes = [
     path: 'clienteDashboard', component: ClienteDashboardComponent,
     children: [
       {path: 'nutri-list',component: NutriListComponent},
-      {path: 'choose-sub',component: ChoSubsComponent},
-      {path: 'clientHome',component: ClienteHomeComponent}
+      {path: 'choose-sub/:id',component: ChoSubsComponent},
+      {path: 'clientHome',component: ClienteHomeComponent},
+      {path: 'nuevareunion/:id',component: ReunionComponent}
     ]
   }
 ];
