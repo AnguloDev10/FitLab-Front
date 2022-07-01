@@ -68,9 +68,11 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('userid',response.id.toString());
         localStorage.setItem('email',response.email);
         localStorage.setItem('name',response.name);
+        localStorage.setItem('phone',response.phone.toString());
+        localStorage.setItem('age',response.age.toString()),
         this.id = localStorage.getItem('userid');
         Swal.fire("Create successfully","Cliquea el boton para avanzar","success").then(result =>{
-          this.router.navigate(['/clienteDashboard/choose-sub',this.id])
+          this.router.navigate(['/clienteDashboard',this.id])
         })
 
       }

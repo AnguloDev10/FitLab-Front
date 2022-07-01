@@ -1,34 +1,39 @@
 <h1 mat-dialog-title>Formulario de Reunion </h1>
-<form class="example-form" name="meetingForm" [formGroup]="meetingForm">
+
+<form   class="example-form" name="meetingForm" [formGroup]="meetingForm">
   <div mat-dialog-content>
     <mat-form-field class="example-full-width">
-      <mat-label></mat-label>
-      <input matInput placeholder="Meeting Name" formControlName="meetingName" name="meetingName">
+      <mat-label>Link de la sesión</mat-label>
+      <input matInput placeholder="link de la sesion" formControlName="link" name="link">
     </mat-form-field>
     <mat-form-field class="example-full-width">
-      <mat-label>Meeting Subject</mat-label>
-      <input matInput placeholder="Meeting Subject" formControlName="meetingSubject" name="meetingSubject">
+      <mat-label>ID del nutricionista</mat-label>
+      <input matInput placeholder="Nutricionista Id" formControlName="nutricionistaId" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>ID del usuario</mat-label>
+      <input matInput placeholder="Usuario Id" formControlName="userId" [value]="id">
     </mat-form-field>
     <div fxLayout="row wrap">
       <div fxFlex="50" fxFill fxLayoutAlign="start center">
         <mat-form-field>
-          <mat-label>Meeting Date</mat-label>
-          <input matInput [matDatepicker]="picker" formControlName="meetingDate">
+          <mat-label>Fecha inicio</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="startAt">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
       </div>
       <div fxFlex="50" fxFill fxLayoutAlign="start center">
         <mat-form-field>
-          <mat-label>Meeting Time</mat-label>
-          <input matInput type="time" placeholder="" formControlName="meetingTime" #time/>
+          <mat-label>Fecha de termino</mat-label>
+          <input matInput [matDatepicker]="picker1" formControlName="endAt">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
         </mat-form-field>
       </div>
     </div>
   </div>
-</form>
-
-<div mat-dialog-actions>
   <button mat-button (click)="cancel()">Cancelar</button>
   <button  type="submit" mat-raised-button color="primary"  cdkFocusInitial (click)="save()">Agregar</button>
-</div>
+</form>
+

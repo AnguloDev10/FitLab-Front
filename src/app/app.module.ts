@@ -49,6 +49,11 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { LocalDateTimePipe } from './pipe/local-date-time.pipe';
 import { ReuListComponent } from './views/cliente/reu-list/reu-list.component';
 import {AccordionModule} from "ngx-bootstrap/accordion";
+import { NutriLikesComponent } from './views/cliente/nutri-likes/nutri-likes.component';
+import {PaginationModule} from "ngx-bootstrap/pagination";
+import { ToastrModule } from 'ngx-toastr';
+import {MatSnackBar} from "@angular/material/snack-bar";
+import { ClienteProfComponent } from './views/cliente/cliente-prof/cliente-prof.component';
 //import { ClienteComponent } from './views/cliente/cliente.component';
 //import { DashboardComponent } from './views/cliente/dashboard/dashboard.component';
 //import { NutricionistaComponent } from './views/nutricionista/nutricionista.component';
@@ -78,7 +83,9 @@ import {AccordionModule} from "ngx-bootstrap/accordion";
     ReunionComponent,
     ReunionFormComponent,
     LocalDateTimePipe,
-    ReuListComponent
+    ReuListComponent,
+    NutriLikesComponent,
+    ClienteProfComponent
   ],
   imports: [
     HttpClientModule,
@@ -106,7 +113,11 @@ import {AccordionModule} from "ngx-bootstrap/accordion";
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    AccordionModule
+    AccordionModule,
+    PaginationModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -60,4 +60,7 @@ export class ProfileComponent implements OnInit {
     this.professionalDates.disable();
   }
 
+  selectTab(number: number) {
+    
+  }
 }

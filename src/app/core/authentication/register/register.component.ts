@@ -52,7 +52,9 @@ export class RegisterComponent implements OnInit {
         response=> {
           localStorage.setItem('userid',response.id);
           localStorage.setItem('email',response.email);
-          localStorage.setItem('name',response.name),
+          localStorage.setItem('name',response.name);
+          localStorage.setItem('phone',response.name);
+          localStorage.setItem('age',response.age),
           //localStorage.setItem('userid',response.id)
           this.id = localStorage.getItem('userid');
           console.log(response.value)
